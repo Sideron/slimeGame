@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     int currentIndex = 0;
     void Start()
     {
-        player.setCharge(slimes[1]);
+        player.setCharge(slimes[currentIndex]);
     }
 
     void Update()
