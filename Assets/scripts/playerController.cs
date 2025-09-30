@@ -15,6 +15,8 @@ public class playerController : MonoBehaviour
     private bool isGrounded;
     private float moveInput;
 
+    public StickySlime slimeTrap;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,9 +48,19 @@ public class playerController : MonoBehaviour
         
 
         // Salto
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            if (isGrounded)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+            if (slimeTrap != null)
+            {
+                slimeTrap.setFree();
+                rb.linearVelocity = new Vector2((-slimeTrap.transform.position+transform.position).normalized.x*jumpForce/1.5f , jumpForce/1.5f);
+                slimeTrap = null;
+                
+            }
         }
     }
 
