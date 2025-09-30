@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class playerShoot : MonoBehaviour
 {
-    public GameObject slimeCharge;
+    private GameObject slimeCharge;
     public float projectileSpeed = 10f;
     GunAim ga;
     void Start()
     {
         ga = GetComponentInChildren<GunAim>();
-        // ga.getShootPosition(); Vector2
     }
 
     void Update()
@@ -35,5 +34,9 @@ public class playerShoot : MonoBehaviour
         {
             rb.linearVelocity = shootDir.normalized * projectileSpeed;
         }
+    }
+    public void setCharge(GameObject slime)
+    {
+        slimeCharge = slime;
     }
 }
