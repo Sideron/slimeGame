@@ -22,12 +22,28 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        // Movimiento horizontal
-        moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
         // Comprobar si est� en el suelo
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        // Movimiento horizontal
+        moveInput = Input.GetAxisRaw("Horizontal");
+        //if(isGrounded) { rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); }
+        if (moveInput != 0)
+        {
+            if (isGrounded)
+            {
+                rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x,moveInput * moveSpeed, 5f*Time.deltaTime), rb.linearVelocity.y);
+            }
+        }
+            else if (isGrounded)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            }
+
+        
 
         // Salto
         if (Input.GetButtonDown("Jump") && isGrounded)
