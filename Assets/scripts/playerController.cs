@@ -59,7 +59,7 @@ public class playerController : MonoBehaviour
                 Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 slimeTrap.setFree();
                 //rb.linearVelocity = new Vector2((-slimeTrap.transform.position+transform.position).normalized.x*jumpForce/1.5f , jumpForce/1.5f);
-                rb.linearVelocity = new Vector2((mouseWorld-transform.position).normalized.x*jumpForce/1.5f , jumpForce/1.5f);
+                rb.linearVelocity = new Vector2((mouseWorld-transform.position).normalized.x*jumpForce , jumpForce);
                 slimeTrap = null;
                 
             }

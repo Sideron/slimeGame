@@ -4,6 +4,8 @@ public class StickySlime : Slime
 {
     [SerializeField]
     private GameObject stickedObject;
+    [SerializeField]
+    bool justReleased = false;
     Rigidbody2D myrb;
     bool wallSticked = false;
     void Start()
@@ -12,13 +14,23 @@ public class StickySlime : Slime
     }
     public override void onTouch(Rigidbody2D rb)
     {
-        if (wallSticked && stickedObject==null) {
+        if (wallSticked && stickedObject == null && !justReleased)
+        {
             rb.bodyType = RigidbodyType2D.Static;
             stickedObject = rb.gameObject;
             playerController player = rb.transform.GetComponent<playerController>();
-            if (player != null) {
+            if (player != null)
+            {
                 player.slimeTrap = this;
             }
+        }
+    }
+    public override void onRelease(Rigidbody2D rb)
+    {
+        if (rb.gameObject == stickedObject && justReleased)
+        {
+            stickedObject = null;
+            justReleased = false;
         }
     }
     void OnCollisionEnter2D(Collision2D collider)
@@ -33,6 +45,6 @@ public class StickySlime : Slime
     public void setFree()
     {
         stickedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-        stickedObject=null;
+        justReleased = true;
     }
 }
