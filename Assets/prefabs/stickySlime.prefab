@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3402134774928957169}
   - component: {fileID: 6111314637551175188}
   - component: {fileID: 4049297925903613347}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: stickySlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c80f91038e94e5fb0b3ade46ff0c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stickedObject: {fileID: 0}
 --- !u!1 &4995263351944761749
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +235,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.35
+  m_Radius: 0.1
 --- !u!114 &1568068167187432077
 MonoBehaviour:
   m_ObjectHideFlags: 0

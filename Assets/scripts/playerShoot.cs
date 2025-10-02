@@ -26,7 +26,7 @@ public class playerShoot : MonoBehaviour
         Vector2 shootDir = ga.getShootDirection();  // dirección hacia donde disparar
 
         // Crear el proyectil
-        GameObject proj = Instantiate(slimeCharge, shootPos, Quaternion.identity);
+        GameObject proj = Instantiate(slimeCharge, transform.position, Quaternion.identity);
 
         // Aplicar velocidad
         Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
