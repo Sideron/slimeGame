@@ -35,12 +35,14 @@ public class StickySlime : Slime
     }
     void OnCollisionEnter2D(Collision2D collider)
     {
-        Rigidbody2D colliderRb = collider.transform.GetComponent<Rigidbody2D>();
+        myrb.bodyType = RigidbodyType2D.Static;
+        wallSticked = true;
+        /*Rigidbody2D colliderRb = collider.transform.GetComponent<Rigidbody2D>();
         if (colliderRb == null)
         {
             myrb.bodyType = RigidbodyType2D.Static;
             wallSticked = true;
-        }
+        }*/
     }
     public void setFree()
     {
