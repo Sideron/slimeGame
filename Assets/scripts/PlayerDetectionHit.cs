@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
 
 public class PlayerDetectionHit : MonoBehaviour
 {
@@ -15,6 +17,13 @@ public class PlayerDetectionHit : MonoBehaviour
     {
         // Ubicamos el SpawnPoint, eso significa que el spawnpoint debe tener su etiqueta (tag)
         GameObject spawn = GameObject.FindGameObjectWithTag("SpawnPoint");
+        GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");
+
+        foreach (var slime in slimes)
+        {
+            Destroy(slime);
+        }
+
         // Mandamos al player a esa posici�n.
         transform.localPosition = spawn.transform.localPosition;
     }
