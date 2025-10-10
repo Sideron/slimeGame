@@ -9,7 +9,7 @@ public class JumpSlime : Slime
         if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y <-0.01f)
         {
             float acutalSpeed = rb.linearVelocity.magnitude;
-            Debug.Log("Actual speed: " + acutalSpeed);
+            //Debug.Log("Actual speed: " + acutalSpeed);
             rb.linearVelocity = (-transform.position + rb.transform.position).normalized*(acutalSpeed>=impulseForce?acutalSpeed:impulseForce);
             //rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             //rb.AddForce((-transform.position + rb.transform.position).normalized * impulseForce * 10, ForceMode2D.Impulse);

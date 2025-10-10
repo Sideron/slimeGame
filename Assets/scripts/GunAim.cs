@@ -4,6 +4,7 @@ public class GunAim : MonoBehaviour
 {
     public float angleOffset = 0f; // corrige si tu sprite no apunta a la derecha por defecto
     SpriteRenderer gunSpr;
+    public SpriteRenderer plyrSpr;
     [SerializeField]
     private Transform shootPosition;
 
@@ -23,6 +24,7 @@ public class GunAim : MonoBehaviour
         mouseWorld.z = 0f; // mantener en 2D
 
         gunSpr.flipY = mouseWorld.x < transform.position.x;
+        plyrSpr.flipX = mouseWorld.x < transform.position.x;
 
         // Dirección desde la pistola hacia el mouse
         Vector3 dir = mouseWorld - transform.position;
