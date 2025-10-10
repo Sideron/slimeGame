@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454cb43733354dd394e340d5f8ad836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulseForce: 1.5
+  impulseForce: 15
 --- !u!1 &6450467912799435179
 GameObject:
   m_ObjectHideFlags: 0
