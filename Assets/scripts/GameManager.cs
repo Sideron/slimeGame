@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
 
         player.setCharge(slimes[currentIndex]);
         row.setIndex(currentIndex);
-        Debug.Log("Switched to slime index: " + currentIndex);
     }
     public bool canShoot(){ return currentAmounts[currentIndex] > 0; }
     public void reduceSlimeCount()
@@ -49,12 +48,19 @@ public class GameManager : MonoBehaviour
     }
     public void restartValues()
     {
+        Debug.Log("Respawn");
+        GameObject spawn = GameObject.FindGameObjectWithTag("SpawnPoint");
+        player.transform.localPosition = spawn.transform.localPosition;
+        GameObject[] slimesInScene = GameObject.FindGameObjectsWithTag("Slime");
+
+        foreach (var slime in slimesInScene)
+        {
+            Destroy(slime);
+        }
         currentIndex = 0;
         row.setIndex(currentIndex);
         currentAmounts = new int[amounts.Length];
         Array.Copy(amounts, currentAmounts, amounts.Length);
-        Debug.Log(amounts);
-        Debug.Log(currentAmounts);
         player.setCharge(slimes[currentIndex]);
         row.updateRow(currentAmounts);
     }

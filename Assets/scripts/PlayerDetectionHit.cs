@@ -15,18 +15,7 @@ public class PlayerDetectionHit : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        Debug.Log("Respawn");
-        // Ubicamos el SpawnPoint, eso significa que el spawnpoint debe tener su etiqueta (tag)
-        GameObject spawn = GameObject.FindGameObjectWithTag("SpawnPoint");
-        GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");
-
-        foreach (var slime in slimes)
-        {
-            Destroy(slime);
-        }
-
-        // Mandamos al player a esa posici�n.
-        transform.localPosition = spawn.transform.localPosition;
+        
         GameObject.Find("GameManager").GetComponent<GameManager>().restartValues();
     }
 }
