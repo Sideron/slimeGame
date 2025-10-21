@@ -878,8 +878,9 @@ MonoBehaviour:
   slimes:
   - {fileID: 1237166614502878501, guid: 2f46727af8d34499ba2cee59ef56ed67, type: 3}
   - {fileID: 2749771474833283599, guid: ee6ea9075f7015c459693b8198c799b2, type: 3}
-  amounts: 
+  amounts: 0300000002000000
   player: {fileID: 860507198}
+  row: {fileID: 1119760494}
 --- !u!1 &782886902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1119760493}
+  - component: {fileID: 1119760494}
   m_Layer: 5
   m_Name: slimesCounter
   m_TagString: Untagged
@@ -1710,6 +1712,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1119760494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119760492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddf42e5489fe40b7b430b64318ef4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counters:
+  - {fileID: 588376583}
+  - {fileID: 130722769}
+  selectFrame: {fileID: 1955413969}
+  index: 0
 --- !u!1 &1181629124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,7 +2326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.64705884}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
