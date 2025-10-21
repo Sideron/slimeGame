@@ -27,5 +27,6 @@ public class PlayerDetectionHit : MonoBehaviour
 
         // Mandamos al player a esa posici�n.
         transform.localPosition = spawn.transform.localPosition;
+        GameObject.Find("GameManager").GetComponent<GameManager>().restartValues();
     }
 }

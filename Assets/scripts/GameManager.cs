@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,8 +12,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player.gm = this;
-        currentAmounts = amounts;
-        player.setCharge(slimes[currentIndex]);
+        restartValues();
     }
 
     void Update()
@@ -44,6 +44,18 @@ public class GameManager : MonoBehaviour
         if (canShoot())
         {
             currentAmounts[currentIndex] = currentAmounts[currentIndex] - 1;
+            row.updateCounter(currentIndex, currentAmounts[currentIndex]);
         }
+    }
+    public void restartValues()
+    {
+        currentIndex = 0;
+        row.setIndex(currentIndex);
+        currentAmounts = new int[amounts.Length];
+        Array.Copy(amounts, currentAmounts, amounts.Length);
+        Debug.Log(amounts);
+        Debug.Log(currentAmounts);
+        player.setCharge(slimes[currentIndex]);
+        row.updateRow(currentAmounts);
     }
 }
