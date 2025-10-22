@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private float scrollSensitivity = 2f;
     public GameObject[] slimes;
     public int[] amounts;
     private int[] currentAmounts;
@@ -19,17 +20,13 @@ public class GameManager : MonoBehaviour
     {
         float scroll = Input.mouseScrollDelta.y;
 
-        if (scroll > 0f)
+        if (scroll != 0 && Mathf.Abs(scroll) < scrollSensitivity)
         {
-            ScrollSlime(1); // Scroll up
-        }
-        else if (scroll < 0f)
-        {
-            ScrollSlime(-1); // Scroll down
+            scrollSlime(scroll<0?-1:1);
         }
     }
 
-    void ScrollSlime(int direction)
+    void scrollSlime(int direction)
     {
         // Wrap around using modulo
         currentIndex = (currentIndex + direction + slimes.Length) % slimes.Length;

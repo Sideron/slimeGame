@@ -1,19 +1,28 @@
 using UnityEngine;
 
+public enum CameraDirection
+{
+    Horizontal,
+    Vertical
+}
 public class cameraFollow : MonoBehaviour
 {
     public Transform targetPoint;
+    public float min = -5;
+    public float max = 5;
+    [SerializeField]
+    private CameraDirection direction;
     public float speed = 10;
     void FixedUpdate()
     {
-        Vector2 followPoint = targetPoint.transform.right*2 + targetPoint.transform.position;
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Vector2.Distance(mouseWorld,targetPoint.transform.position) < 2)
+        Vector2 nPosition = Vector2.Lerp(transform.position, targetPoint.position, speed * Time.deltaTime);
+        if (direction == CameraDirection.Horizontal)
         {
-            followPoint = targetPoint.transform.position;
+            transform.position = new Vector3(Mathf.Clamp(nPosition.x,min,max), transform.position.y, -10);
         }
-        Vector2 nPosition = Vector2.Lerp(transform.position,followPoint+Vector2.up*4+Vector2.right*3,speed*Time.deltaTime);
-        //Vector2 nPosition = followPoint;
-        transform.position = new Vector3(nPosition.x, nPosition.y,-10);
+        else
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(nPosition.y,min,max), -10);
+        }
     }
 }
