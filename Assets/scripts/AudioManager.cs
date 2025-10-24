@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // Patrón Singleton para evitar duplicados
+        // Patrï¿½n Singleton para evitar duplicados
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Mantiene la música al cambiar de escena
+        DontDestroyOnLoad(gameObject); // Mantiene la mï¿½sica al cambiar de escena
     }
 
     private void Start()
@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic()
     {
         if (musicSource.isPlaying) return;
-        musicSource.volume = Mathf.Clamp01(0.03f);
+        musicSource.volume = Mathf.Clamp01(0.85f);
         musicSource.clip = backgroundMusic;
         musicSource.loop = true;
         musicSource.Play();
