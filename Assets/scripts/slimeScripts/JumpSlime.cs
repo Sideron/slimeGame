@@ -4,10 +4,12 @@ public class JumpSlime : Slime
 {
     [SerializeField]
     private float impulseForce = 10;
+    [SerializeField] private AudioClip jump;
     public override void onTouch(Rigidbody2D rb)
     {
         if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y <-0.01f)
         {
+            AudioManager.Instance.PlaySFX(jump);
             float acutalSpeed = rb.linearVelocity.magnitude;
             //Debug.Log("Actual speed: " + acutalSpeed);
             rb.linearVelocity = (-transform.position + rb.transform.position).normalized*(acutalSpeed>=impulseForce?acutalSpeed:impulseForce);

@@ -5,7 +5,7 @@ public class cameraFollow : MonoBehaviour
     public float min = -5;
     public float max = 5;
     [SerializeField]
-    private bool freezeY = true;
+    //private bool freezeY = true;
     public float speed = 10;
     public float differenceX = 3f;
     public float offsetFactor = 0.025f;

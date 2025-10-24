@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\PlayerDetectionHit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\scripts\\PlayerDetectionHit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\slimescripts\\jumpslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slimescripts\\jumpslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\playerdetectionhit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerdetectionhit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\spikes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spikes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\assets\\scripts\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\assets\\scripts\\gunaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gunaim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\proyectofinal\\slimegame\\assets\\scripts\\ui\\slimerow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\slimerow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JumpSlime.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\slimeScripts\\JumpSlime.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\slimeScripts\\JumpSlime.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\slimeScripts\\JumpSlime.cs",
+              "RelativeToolTip": "Assets\\scripts\\slimeScripts\\JumpSlime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T01:20:45.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerDetectionHit.cs",
               "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\PlayerDetectionHit.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\PlayerDetectionHit.cs",
               "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\PlayerDetectionHit.cs",
               "RelativeToolTip": "Assets\\scripts\\PlayerDetectionHit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T05:27:51.052Z",
+              "WhenOpened": "2025-10-24T01:03:28.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Spikes.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\Spikes.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Spikes.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\Spikes.cs",
+              "RelativeToolTip": "Assets\\scripts\\Spikes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T01:03:15.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "playerController.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\playerController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\playerController.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\playerController.cs",
+              "RelativeToolTip": "Assets\\scripts\\playerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T00:37:48.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\AudioManager.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\AudioManager.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:51:47.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "cameraFollow.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\cameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\cameraFollow.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\cameraFollow.cs",
+              "RelativeToolTip": "Assets\\scripts\\cameraFollow.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:51:32.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "slimeRow.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\ui\\slimeRow.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\ui\\slimeRow.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\ui\\slimeRow.cs",
+              "RelativeToolTip": "Assets\\scripts\\ui\\slimeRow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:49:04.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameManager.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:45:47.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GunAim.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\GunAim.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GunAim.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\GunAim.cs",
+              "RelativeToolTip": "Assets\\scripts\\GunAim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:44:02.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "playerShoot.cs",
+              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\playerShoot.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\playerShoot.cs",
+              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\ProyectoFinal\\slimeGame\\Assets\\scripts\\playerShoot.cs",
+              "RelativeToolTip": "Assets\\scripts\\playerShoot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T23:42:41.884Z",
               "EditorCaption": ""
             }
           ]

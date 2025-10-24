@@ -6,6 +6,9 @@ public class playerShoot : MonoBehaviour
     public float projectileSpeed = 10f;
     public GameManager gm;
     GunAim ga;
+
+    [SerializeField] private AudioClip shootSFX;
+
     void Start()
     {
         ga = GetComponentInChildren<GunAim>();
@@ -28,6 +31,7 @@ public class playerShoot : MonoBehaviour
             Vector2 shootPos = ga.getShootPosition();   // posición desde donde disparar
             Vector2 shootDir = ga.getShootDirection();  // dirección hacia donde disparar
 
+            
             // Crear el proyectil
             GameObject proj = Instantiate(slimeCharge, transform.position, Quaternion.identity);
 
@@ -37,6 +41,7 @@ public class playerShoot : MonoBehaviour
             {
                 rb.linearVelocity = shootDir.normalized * projectileSpeed;
             }
+            AudioManager.Instance.PlaySFX(shootSFX);
             gm.reduceSlimeCount();
         }
     }

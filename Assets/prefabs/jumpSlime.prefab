@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseForce: 15
+  jump: {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
 --- !u!1 &6450467912799435179
 GameObject:
   m_ObjectHideFlags: 0

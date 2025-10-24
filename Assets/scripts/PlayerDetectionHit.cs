@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerDetectionHit : MonoBehaviour
 {
+    [SerializeField] private AudioClip deadSFX;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Si colisionamos con la zona de muerte "DeadZone" o colisionamos con un enemigo
         if (collision.gameObject.CompareTag("DeadZone"))
         {
+            AudioManager.Instance.PlaySFX(deadSFX, 5.5f);
             SpawnPlayer();
         }
     }

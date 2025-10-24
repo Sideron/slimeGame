@@ -17,6 +17,10 @@ public class playerController : MonoBehaviour
 
     public StickySlime slimeTrap;
 
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip pisadas;
+    [SerializeField] private float stepInterval = 0.1f; // tiempo entre pasos
+    private float stepTimer = 0f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,16 +38,23 @@ public class playerController : MonoBehaviour
             if (isGrounded)
             {
                 rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+                stepTimer -= Time.deltaTime;
+                if (stepTimer <= 0f)
+                {
+                    AudioManager.Instance.PlaySFX(pisadas);
+                    stepTimer = stepInterval;
+                }
             }
             else
             {
                 rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x,moveInput * moveSpeed, 5f*Time.deltaTime), rb.linearVelocity.y);
             }
         }
-            else if (isGrounded)
-            {
-                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            }
+        else if (isGrounded)
+        {
+            stepTimer = 0f;
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
 
         
 
@@ -52,6 +63,7 @@ public class playerController : MonoBehaviour
         {
             if (isGrounded)
             {
+                AudioManager.Instance.PlaySFX(jumpSound);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             }
             if (slimeTrap != null)
