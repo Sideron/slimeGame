@@ -10,7 +10,7 @@ public class PlayerDetectionHit : MonoBehaviour
         // Si colisionamos con la zona de muerte "DeadZone" o colisionamos con un enemigo
         if (collision.gameObject.CompareTag("DeadZone"))
         {
-            AudioManager.Instance.PlaySFX(deadSFX, 5.5f);
+            AudioManager.Instance.PlaySFX(deadSFX, 1f);
             SpawnPlayer();
         }
     }
