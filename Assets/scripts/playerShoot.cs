@@ -28,8 +28,9 @@ public class playerShoot : MonoBehaviour
         if (gm.canShoot())
         {
             // Asegúrate de que GunAim te dé la posición y dirección de disparo
-            Vector2 shootPos = ga.getShootPosition();   // posición desde donde disparar
+            RaycastHit2D rayCollision = Physics2D.Raycast(transform.position, ga.getShootPosition());
             Vector2 shootDir = ga.getShootDirection();  // dirección hacia donde disparar
+            Vector2 shootPos = (rayCollision.distance*shootDir)+ new Vector2(transform.position.x,transform.position.y);   // posición desde donde disparar
 
             GameObject proj = Instantiate(slimeCharge, shootPos, Quaternion.identity);
 
