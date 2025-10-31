@@ -38,9 +38,4 @@ public class GunAim : MonoBehaviour
     public Vector2 getShootPosition(){
         return shootPosition.position;
     }
-    public Vector2 getShootDirection(){
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorld.z = 0f;
-        return (mouseWorld - shootPosition.position).normalized;
-    }
 }
