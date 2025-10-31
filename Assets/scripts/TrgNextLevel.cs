@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class TrgNextLevel : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    private int targetLevel = 0;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -18,11 +18,7 @@ public class TrgNextLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            
+            SceneManager.LoadScene(targetLevel);
         }
     }
 }
