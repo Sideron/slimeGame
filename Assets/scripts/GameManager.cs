@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour
     public playerShoot player;
     public slimeRow row;
     int currentIndex = 0;
+    Animator fadeOverlay;
     void Start()
     {
         player.gm = this;
+        fadeOverlay = GameObject.Find("fadeOverlay").GetComponent<Animator>();
         restartValues();
     }
 
@@ -60,5 +62,9 @@ public class GameManager : MonoBehaviour
         Array.Copy(amounts, currentAmounts, amounts.Length);
         player.setCharge(slimes[currentIndex]);
         row.updateRow(currentAmounts);
+    }
+    public void fadeAnimation()
+    {
+        fadeOverlay.Play("fade");
     }
 }

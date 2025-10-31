@@ -5,20 +5,18 @@ public class TrgNextLevel : MonoBehaviour
 {
     [SerializeField]
     private int targetLevel = 0;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(targetLevel);
+            FindFirstObjectByType<GameManager>().fadeAnimation();
+            Invoke("goTargetLevel", 0.45f);
         }
+    }
+
+    private void goTargetLevel()
+    {
+        
+        SceneManager.LoadScene(targetLevel);
     }
 }
