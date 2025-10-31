@@ -31,16 +31,14 @@ public class playerShoot : MonoBehaviour
             Vector2 shootPos = ga.getShootPosition();   // posición desde donde disparar
             Vector2 shootDir = ga.getShootDirection();  // dirección hacia donde disparar
 
-            
-            // Crear el proyectil
-            GameObject proj = Instantiate(slimeCharge, transform.position, Quaternion.identity);
+            GameObject proj = Instantiate(slimeCharge, shootPos, Quaternion.identity);
 
-            // Aplicar velocidad
             Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.linearVelocity = shootDir.normalized * projectileSpeed;
             }
+            proj.GetComponent<Slime>().onShoot(GetComponent<Rigidbody2D>());
             AudioManager.Instance.PlaySFX(shootSFX);
             gm.reduceSlimeCount();
         }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class JumpSlime : Slime
@@ -7,15 +8,26 @@ public class JumpSlime : Slime
     [SerializeField] private AudioClip jump;
     public override void onTouch(Rigidbody2D rb)
     {
-        if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y <-0.01f)
+        base.onShoot(rb);
+        if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y < -0.01f)
         {
-            AudioManager.Instance.PlaySFX(jump);
-            float acutalSpeed = rb.linearVelocity.magnitude;
-            //Debug.Log("Actual speed: " + acutalSpeed);
-            rb.linearVelocity = (-transform.position + rb.transform.position).normalized*(acutalSpeed>=impulseForce?acutalSpeed:impulseForce);
-            //rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-            //rb.AddForce((-transform.position + rb.transform.position).normalized * impulseForce * 10, ForceMode2D.Impulse);
+            pushObject(rb);
         }
     }
-    public override void onRelease(Rigidbody2D rb){}
+
+    public override void onShoot(Rigidbody2D rb)
+    {
+        base.onShoot(rb);
+        if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y < -0.01f)
+        {
+            pushObject(rb);
+        }
+    }
+    
+    private void pushObject(Rigidbody2D rb)
+    {
+        AudioManager.Instance.PlaySFX(jump);
+        float acutalSpeed = rb.linearVelocity.magnitude;
+        rb.linearVelocity = (-transform.position + rb.transform.position).normalized * (acutalSpeed >= impulseForce ? acutalSpeed : impulseForce);
+    }
 }
