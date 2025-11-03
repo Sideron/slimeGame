@@ -14,9 +14,8 @@ public class playerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
-
-    //public StickySlime slimeTrap;
-
+    public float coyoteTime = 0.1f;   // tiempo extra después de caer
+    private float coyoteTimeCounter;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip pisadas;
     [SerializeField] private float stepInterval = 0.1f; // tiempo entre pasos
@@ -29,6 +28,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        coyoteTimeCounter = isGrounded ? coyoteTime : coyoteTimeCounter - Time.deltaTime;
         moveInput = Input.GetAxisRaw("Horizontal");
         if (moveInput != 0)
         {
@@ -52,26 +52,14 @@ public class playerController : MonoBehaviour
             stepTimer = 0f;
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
-
-
-
-        // Salto
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGrounded)
+            if (coyoteTimeCounter > 0)
             {
                 AudioManager.Instance.PlaySFX(jumpSound);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                coyoteTimeCounter = 0;
             }
-            /*if (slimeTrap != null)
-            {
-                Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                slimeTrap.setFree();
-                //rb.linearVelocity = new Vector2((-slimeTrap.transform.position+transform.position).normalized.x*jumpForce/1.5f , jumpForce/1.5f);
-                rb.linearVelocity = new Vector2((mouseWorld-transform.position).normalized.x*jumpForce , jumpForce);
-                slimeTrap = null;
-                
-            }*/
         }
     }
     
