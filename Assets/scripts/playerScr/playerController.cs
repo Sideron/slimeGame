@@ -44,7 +44,7 @@ public class playerController : MonoBehaviour
             }
             else
             {
-                rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x,moveInput * moveSpeed, 5f*Time.deltaTime), rb.linearVelocity.y);
+                rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, moveInput * moveSpeed, 5f * Time.deltaTime), rb.linearVelocity.y);
             }
         }
         else if (isGrounded)
@@ -53,7 +53,7 @@ public class playerController : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
 
-        
+
 
         // Salto
         if (Input.GetButtonDown("Jump"))
@@ -73,6 +73,12 @@ public class playerController : MonoBehaviour
                 
             }*/
         }
+    }
+    
+    public void Dash()
+    {
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        rb.linearVelocity = new Vector2((mouseWorld-transform.position).normalized.x*jumpForce , jumpForce);
     }
 
     void OnDrawGizmosSelected()

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StickySlime : Slime
@@ -20,6 +21,8 @@ public class StickySlime : Slime
             playerController player = rb.transform.GetComponent<playerController>();
             if (player != null)
             {
+                stickyParasite sp = player.transform.AddComponent<stickyParasite>();
+                sp.sticky = this;
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 rb.linearDamping = viscosity;
             }
@@ -31,11 +34,9 @@ public class StickySlime : Slime
         if (rb.gameObject == stickedObject && player)
         {
             Debug.Log("Released");
-            stickedObject = null;
             if (player != null)
             {
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                rb.linearDamping = 0;
+                releasePlayer();
             }
         }
     }
@@ -44,8 +45,11 @@ public class StickySlime : Slime
         myrb.bodyType = RigidbodyType2D.Static;
         wallSticked = true;
     }
-    public void setFree()
+    public void releasePlayer()
     {
-        stickedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        Rigidbody2D playerRB = stickedObject.GetComponent<Rigidbody2D>();
+        playerRB.bodyType = RigidbodyType2D.Dynamic;
+        playerRB.linearDamping = 0;
+        stickedObject = null;
     }
 }
