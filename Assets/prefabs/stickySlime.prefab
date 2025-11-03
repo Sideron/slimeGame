@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickedObject: {fileID: 0}
-  justReleased: 0
+  viscosity: 70
 --- !u!1 &4995263351944761749
 GameObject:
   m_ObjectHideFlags: 0

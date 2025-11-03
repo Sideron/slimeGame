@@ -15,7 +15,7 @@ public class playerController : MonoBehaviour
     private bool isGrounded;
     private float moveInput;
 
-    public StickySlime slimeTrap;
+    //public StickySlime slimeTrap;
 
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip pisadas;
@@ -28,11 +28,8 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        // Comprobar si est� en el suelo
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        // Movimiento horizontal
         moveInput = Input.GetAxisRaw("Horizontal");
-        //if(isGrounded) { rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); }
         if (moveInput != 0)
         {
             if (isGrounded)
@@ -66,7 +63,7 @@ public class playerController : MonoBehaviour
                 AudioManager.Instance.PlaySFX(jumpSound);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             }
-            if (slimeTrap != null)
+            /*if (slimeTrap != null)
             {
                 Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 slimeTrap.setFree();
@@ -74,7 +71,7 @@ public class playerController : MonoBehaviour
                 rb.linearVelocity = new Vector2((mouseWorld-transform.position).normalized.x*jumpForce , jumpForce);
                 slimeTrap = null;
                 
-            }
+            }*/
         }
     }
 

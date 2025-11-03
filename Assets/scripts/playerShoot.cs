@@ -33,7 +33,6 @@ public class playerShoot : MonoBehaviour
             float distance = (-myPosition + ga.getShootPosition()).magnitude;
             RaycastHit2D rayCollision = Physics2D.Raycast(myPosition, -myPosition + ga.getShootPosition(),distance,layerMask);
             Vector2 shootDir = (-myPosition + ga.getShootPosition()).normalized;
-            Debug.Log(shootDir);
             Vector2 shootPos;
             if (rayCollision.collider != null)
             {
