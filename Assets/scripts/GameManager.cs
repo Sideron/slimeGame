@@ -11,11 +11,29 @@ public class GameManager : MonoBehaviour
     public slimeRow row;
     int currentIndex = 0;
     Animator fadeOverlay;
+    private GameObject spawnPoints;
+    private Transform[] spawnPointArray;
+    Transform lastSpawnTransform;
     void Start()
     {
         player.gm = this;
         fadeOverlay = GameObject.Find("fadeOverlay").GetComponent<Animator>();
+        spawnPoints = GameObject.FindGameObjectWithTag("SpawnPoint");
+        spawnPointArray = spawnPoints.GetComponentsInChildren<Transform>();
+        String lastPoint = PlayerPrefs.GetString("LastSpawnPoint", "");
+        lastSpawnTransform = spawnPointArray[0];
+        foreach (var point in spawnPointArray)
+        {
+            if (point.name == lastPoint)
+            {
+                lastSpawnTransform = point;
+                break;
+            }
+        }
+        //player.transform.position = lastSpawnTransform.position;
+        GameObject.Find("Main Camera").GetComponent<cameraFollow>().setPosition(lastSpawnTransform.position);
         restartValues();
+        PlayerPrefs.DeleteKey("LastSpawnPoint");
     }
 
     void Update()
@@ -48,8 +66,7 @@ public class GameManager : MonoBehaviour
     public void restartValues()
     {
         Debug.Log("Respawn");
-        GameObject spawn = GameObject.FindGameObjectWithTag("SpawnPoint");
-        player.transform.localPosition = spawn.transform.localPosition;
+        player.transform.position = lastSpawnTransform.position;
         GameObject[] slimesInScene = GameObject.FindGameObjectsWithTag("Slime");
 
         foreach (var slime in slimesInScene)

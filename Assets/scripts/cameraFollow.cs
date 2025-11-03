@@ -2,8 +2,11 @@ using UnityEngine;
 public class cameraFollow : MonoBehaviour
 {
     public Transform targetPoint;
-    public float min = -5;
-    public float max = 5;
+    [Header("Camera Bounds")]
+    public float minX = -5;
+    public float maxX = 5;
+    public float minY = -5;
+    public float maxY = 5;
     [SerializeField]
     //private bool freezeY = true;
     public float speed = 10;
@@ -12,6 +15,14 @@ public class cameraFollow : MonoBehaviour
 
     private float pointerDiff = 0f;
     private float lastX = 0f;
+    public void setPosition(Vector2 position)
+    {
+        transform.position = new Vector3(
+            Mathf.Clamp(position.x, minX, maxX),
+            Mathf.Clamp(position.y, minY, maxY),
+            -10f
+        );
+    }
     void FixedUpdate()
     {
         float diff = targetPoint.position.x - lastX;
@@ -23,13 +34,19 @@ public class cameraFollow : MonoBehaviour
 
         float targetX = Mathf.Clamp(
             targetPoint.position.x + (differenceX * pointerDiff),
-            min,
-            max
+            minX,
+            maxX
+        );
+
+        float targetY = Mathf.Clamp(
+            targetPoint.position.y,
+            minY,
+            maxY
         );
 
         float smoothX = Mathf.Lerp(transform.position.x, targetX, speed * Time.deltaTime);
 
-        transform.position = new Vector3(smoothX, transform.position.y, -10f);
+        transform.position = new Vector3(smoothX, targetY, -10f);
         /*if (freezeY)
         {
             transform.position = new Vector3(Mathf.Clamp(nPosition.x,min,max), transform.position.y, -10);
