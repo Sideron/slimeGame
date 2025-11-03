@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7542919042272722234}
   - component: {fileID: 1132451400521161463}
   - component: {fileID: 8933438872869280058}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: teleportSlime
   m_TagString: Slime
   m_Icon: {fileID: 0}

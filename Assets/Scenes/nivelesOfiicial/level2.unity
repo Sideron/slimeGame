@@ -547,7 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 1627137888}
   min: -6.65
-  max: 1.74
+  max: 3.12
   speed: 3.5
   differenceX: 5
   offsetFactor: 0.01

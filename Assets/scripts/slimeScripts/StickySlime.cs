@@ -27,11 +27,11 @@ public class StickySlime : Slime
     }
     public override void onRelease(Rigidbody2D rb)
     {
-        if (rb.gameObject == stickedObject)
+        playerController player = rb.transform.GetComponent<playerController>();
+        if (rb.gameObject == stickedObject && player)
         {
             Debug.Log("Released");
             stickedObject = null;
-            playerController player = rb.transform.GetComponent<playerController>();
             if (player != null)
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
