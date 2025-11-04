@@ -47,7 +47,8 @@ public class playerShoot : MonoBehaviour
             Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.linearVelocity = shootDir.normalized * projectileSpeed;
+                //rb.linearVelocity = shootDir.normalized * projectileSpeed;
+                rb.AddForce(shootDir.normalized * projectileSpeed, ForceMode2D.Impulse);
             }
             proj.GetComponent<Slime>().onShoot(GetComponent<Rigidbody2D>());
             AudioManager.Instance.PlaySFX(shootSFX);
@@ -58,23 +59,4 @@ public class playerShoot : MonoBehaviour
     {
         slimeCharge = slime;
     }
-    /*void DrawRaycast()
-    {
-        // Dirección del rayo (asegúrate que esté normalizada)
-        Vector2 direction = ga.getShootPosition().normalized;
-
-        // Lanza el Raycast
-        RaycastHit2D rayCollision = Physics2D.Raycast(transform.position, direction, rayLength);
-
-        // Dibuja el rayo en la vista de escena
-        Debug.DrawRay(transform.position, direction * rayLength, rayColor);
-
-        // Si colisiona con algo, dibuja un punto o línea adicional
-        if (rayCollision.collider != null)
-        {
-            Debug.DrawLine(transform.position, rayCollision.point, Color.green); // verde hasta el punto de impacto
-            Debug.DrawRay(rayCollision.point, Vector2.up * 0.2f, Color.yellow); // pequeño marcador
-            Debug.Log($"Impactó con: {rayCollision.collider.name}");
-        }
-    }*/
 }
