@@ -6,6 +6,7 @@ public class TeleportSlime : Slime
     {
         Debug.Log("Destroyed");
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         player.transform.position = transform.position;
         Destroy(gameObject);
     }
