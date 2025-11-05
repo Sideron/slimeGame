@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 4686924816765343256}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8563935, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0.8563935, y: -0.081, z: 0}
   m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -106,8 +106,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -416649717
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3616075707040771709, guid: 30d961fce2d644550abc8a36443a939c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1761692511
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.24296904, g: 0.38894126, b: 0.7924528, a: 1}
@@ -299,7 +299,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   coyoteTime: 0.1
-  jumpSound: {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
+  jumpSound:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   pisadas: {fileID: 8300000, guid: 47cc4d102c26773478044d3855d51f3d, type: 3}
   stepInterval: 0.4
 --- !u!114 &711479449425417866
@@ -319,7 +322,10 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
-  shootSFX: {fileID: 8300000, guid: 47452828f4e74a548910ed01f2cf683d, type: 3}
+  shootSFX:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &5569761695388990266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +460,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1761692511
-  m_SortingLayer: 1
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -7613315869426512137, guid: 7e778a37ba4ec42369531868c77d7179, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -494,7 +500,7 @@ Transform:
   m_GameObject: {fileID: 7383929781901758906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.19509031, w: 0.98078537}
-  m_LocalPosition: {x: 1.4, y: 0, z: 0}
+  m_LocalPosition: {x: 1.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,7 +589,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.32
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -636,7 +642,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -5
+      scalar: -7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1337,7 +1343,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 35
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4478,7 +4484,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5248,7 +5254,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b4afe98ae10c041359b5233b9529f590, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5266,9 +5272,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 56733605
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5331,8 +5337,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8574167947916935274}
   - {fileID: 8889101384437412328}
+  - {fileID: 8574167947916935274}
   m_Father: {fileID: 2639830387558708577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2878147671589146831

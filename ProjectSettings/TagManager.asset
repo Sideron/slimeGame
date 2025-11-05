@@ -44,6 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 56733605
+    locked: 0
+  - name: middleback
+    uniqueID: 3340704191
+    locked: 0
+  - name: MapLevel
+    uniqueID: 341699735
+    locked: 0
   - name: player
     uniqueID: 2533274785
     locked: 0
