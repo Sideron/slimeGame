@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counters: []
   selectFrame: {fileID: 1955413969}
-  slimeCounterPrefab: {fileID: 1119760492}
+  slimeCounterPrefab: {fileID: 8898701104444881448, guid: b3540f294fd6d44f2b7a118af5d2abd8, type: 3}
   index: 0
 --- !u!1 &1519200655
 GameObject:
