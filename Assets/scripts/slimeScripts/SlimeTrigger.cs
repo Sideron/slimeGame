@@ -9,13 +9,13 @@ public class SlimeTrigger : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.attachedRigidbody != null)
+        if (other.attachedRigidbody != null && !other.isTrigger)
         {
             slime?.onTouch(other.attachedRigidbody);
         }
     }
     void OnTriggerExit2D(Collider2D other){
-        if (other.attachedRigidbody != null)
+        if (other.attachedRigidbody != null && !other.isTrigger)
         {
             slime?.onRelease(other.attachedRigidbody);
         }
