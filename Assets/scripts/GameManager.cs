@@ -63,6 +63,25 @@ public class GameManager : MonoBehaviour
             row.updateCounter(currentIndex, currentAmounts[currentIndex]);
         }
     }
+    public void addSlimeToInventory(Slime slime)
+    {
+        string slimeType = slime.gameObject.name;
+        if (slimeType.EndsWith("(Clone)"))
+        {
+            slimeType = slimeType.Substring(0, slimeType.Length - 7);
+        }
+        Debug.Log("Adding " + slimeType + " to inventory");
+        for (int i = 0; i < slimes.Length; i++)
+        {
+            Debug.Log("Checking " + slimes[i].name);
+            if (slimes[i].name == slimeType)
+            {
+                currentAmounts[i] = currentAmounts[i] + 1;
+                row.updateCounter(i, currentAmounts[i]);
+                break;
+            }
+        }
+    }
     public void restartValues()
     {
         Debug.Log("Respawn");
