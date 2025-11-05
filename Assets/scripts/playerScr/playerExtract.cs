@@ -8,6 +8,7 @@ public class playerExtract : MonoBehaviour
     [SerializeField] private float extractDistance = 10f;
     [SerializeField] private LayerMask slimeLayer;
     private GameObject particleEffect;
+    bool isExtracting = false;
     void Start()
     {
         //ce = GetComponentInChildren<checkExtract>();
@@ -20,7 +21,7 @@ public class playerExtract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1) && !Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1) && !Input.GetMouseButton(0) && isExtracting)
         {
             Vector2 direction = ga.getShootPosition() - new Vector2(transform.position.x, transform.position.y);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction.normalized, extractDistance, slimeLayer);
@@ -38,6 +39,7 @@ public class playerExtract : MonoBehaviour
         {
             particleEffect.SetActive(true);
             extractionEffect();
+            Invoke("startExtracting", 0.4f);
         }
     }
     void extractionEffect()
@@ -49,12 +51,21 @@ public class playerExtract : MonoBehaviour
         else
         {
             particleEffect.SetActive(false);
+            stopExtracting();
         }
     }
     void extractSlime(Slime slime)
     {
         gm.addSlimeToInventory(slime);
         slime.onExtract();
+    }
+    void startExtracting()
+    {
+        isExtracting = true;
+    }
+    void stopExtracting()
+    {
+        isExtracting = false;
     }
     void OnDrawGizmosSelected()
     {

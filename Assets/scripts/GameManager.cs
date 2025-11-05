@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
         }
         //player.transform.position = lastSpawnTransform.position;
         GameObject.Find("Main Camera").GetComponent<cameraFollow>().setPosition(lastSpawnTransform.position);
+        // Initialize currentAmounts
+        /*for(int i=0; i<amounts.Length; i++)
+        {
+            amounts[i] = PlayerPrefs.GetInt("SlimeAmount"+i, amounts[i]);
+        }*/
         restartValues();
         PlayerPrefs.DeleteKey("LastSpawnPoint");
     }
@@ -101,6 +106,10 @@ public class GameManager : MonoBehaviour
     }
     public void fadeAnimation()
     {
+        for(int i=0; i<amounts.Length; i++)
+        {
+            PlayerPrefs.SetInt("SlimeAmount"+i, amounts[i]);
+        }
         fadeOverlay.Play("fade");
     }
 }
