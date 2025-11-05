@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player.gm = this;
+        row.init(slimes, amounts);
         fadeOverlay = GameObject.Find("fadeOverlay").GetComponent<Animator>();
         spawnPoints = GameObject.FindGameObjectWithTag("SpawnPoint");
         spawnPointArray = spawnPoints.GetComponentsInChildren<Transform>();

@@ -2,9 +2,29 @@ using UnityEngine;
 
 public class slimeRow : MonoBehaviour
 {
-    public uiSlimeCounter[] counters;
+    [SerializeField]private uiSlimeCounter[] counters;
     public Transform selectFrame;
+    public GameObject slimeCounterPrefab;
     public int index = 0;
+    bool isInit = false;
+    public void init(GameObject[] slimes, int[] amounts)
+    {
+        Debug.Log(slimes.Length);
+        Debug.Log(amounts.Length);
+        counters = new uiSlimeCounter[slimes.Length];
+        for (int i = 0; i < slimes.Length; i++)
+        {
+            GameObject nCounter = Instantiate(slimeCounterPrefab, selectFrame.position + Vector3.right*(i*100), Quaternion.identity);
+            nCounter.transform.SetParent(this.transform);
+            nCounter.transform.localScale = Vector3.one;
+            uiSlimeCounter counterScript = nCounter.GetComponent<uiSlimeCounter>();
+            SpriteRenderer sr = slimes[i].GetComponent<SpriteRenderer>();
+            counterScript.slimeColor = sr.color;
+            counterScript.slimeIconSprite = sr.sprite;
+            counters[i] = counterScript;
+        }
+        isInit = true;
+    }
 
     public void setIndex(int nIndex)
     {
@@ -23,6 +43,7 @@ public class slimeRow : MonoBehaviour
     }
     void Update()
     {
+        if(!isInit) { return; }
         selectFrame.position = Vector2.Lerp(selectFrame.position,counters[index].transform.position,0.1f);
     }
 }
