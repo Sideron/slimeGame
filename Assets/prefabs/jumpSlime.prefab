@@ -167,7 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseForce: 15
-  jump: {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
+  jump:
+  - {fileID: 8300000, guid: 5d706f4fd1c7ad74990db10a16ec17c6, type: 3}
+  - {fileID: 8300000, guid: 56e54eb4c43adfe4aaa1e976650fde08, type: 3}
+  - {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
 --- !u!1 &6450467912799435179
 GameObject:
   m_ObjectHideFlags: 0

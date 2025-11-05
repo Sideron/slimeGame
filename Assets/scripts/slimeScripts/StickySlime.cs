@@ -7,6 +7,8 @@ public class StickySlime : Slime
     Rigidbody2D myrb;
     bool wallSticked = false;
     [SerializeField] private float viscosity = 50f;
+    [SerializeField] private AudioClip sticky;
+    [SerializeField] private AudioClip stickyRelease;
     void Start()
     {
         myrb = GetComponent<Rigidbody2D>();
@@ -15,6 +17,7 @@ public class StickySlime : Slime
     {
         if (wallSticked && stickedObject == null)
         {
+            AudioManager.Instance.PlaySFX(sticky, 1.0f);
             Debug.Log("Entered");
             rb.bodyType = RigidbodyType2D.Static;
             stickedObject = rb.gameObject;
@@ -47,6 +50,7 @@ public class StickySlime : Slime
     }
     public void releasePlayer()
     {
+        AudioManager.Instance.PlaySFX(stickyRelease, 0.6f);
         Rigidbody2D playerRB = stickedObject.GetComponent<Rigidbody2D>();
         playerRB.bodyType = RigidbodyType2D.Dynamic;
         playerRB.linearDamping = 0;

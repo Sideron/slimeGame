@@ -5,7 +5,7 @@ public class JumpSlime : Slime
 {
     [SerializeField]
     private float impulseForce = 10;
-    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip[] jump;
     public override void onTouch(Rigidbody2D rb)
     {
         base.onShoot(rb);
@@ -26,7 +26,7 @@ public class JumpSlime : Slime
     
     private void pushObject(Rigidbody2D rb)
     {
-        AudioManager.Instance.PlaySFX(jump);
+        AudioManager.Instance.PlayRandomSFX(jump);
         float acutalSpeed = rb.linearVelocity.magnitude;
         rb.linearVelocity = (-transform.position + rb.transform.position).normalized * (acutalSpeed >= impulseForce ? acutalSpeed : impulseForce);
     }
