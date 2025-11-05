@@ -5612,6 +5612,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 711479449425417866, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'shootSFX.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: dce45ee03e423ea49a69c9f3ca9cbd97, type: 3}
+    - target: {fileID: 711479449425417866, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'shootSFX.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 47452828f4e74a548910ed01f2cf683d, type: 3}
+    - target: {fileID: 711479449425417866, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'shootSFX.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c089459d3b3361428bc230374df4064, type: 3}
     - target: {fileID: 2639830387558708577, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.400002
@@ -5656,6 +5668,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 6419434027649410374, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'jumpSound.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d706f4fd1c7ad74990db10a16ec17c6, type: 3}
+    - target: {fileID: 6419434027649410374, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'jumpSound.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 56e54eb4c43adfe4aaa1e976650fde08, type: 3}
+    - target: {fileID: 6419434027649410374, guid: fa0e2599dcbad41f082f4b18ad937e88, type: 3}
+      propertyPath: 'jumpSound.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

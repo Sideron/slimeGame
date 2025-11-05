@@ -16,7 +16,7 @@ public class playerController : MonoBehaviour
     private float moveInput;
     public float coyoteTime = 0.1f;   // tiempo extra después de caer
     private float coyoteTimeCounter;
-    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip[] jumpSound;
     [SerializeField] private AudioClip pisadas;
     [SerializeField] private float stepInterval = 0.1f; // tiempo entre pasos
     private float stepTimer = 0f;
@@ -56,7 +56,7 @@ public class playerController : MonoBehaviour
         {
             if (coyoteTimeCounter > 0)
             {
-                AudioManager.Instance.PlaySFX(jumpSound);
+                AudioManager.Instance.PlayRandomSFX(jumpSound);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 coyoteTimeCounter = 0;
             }

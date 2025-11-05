@@ -9,7 +9,7 @@ public class playerShoot : MonoBehaviour
     public LayerMask layerMask;
     GunAim ga;
 
-    [SerializeField] private AudioClip shootSFX;
+    [SerializeField] private AudioClip[] shootSFX;
 
     void Start()
     {
@@ -51,7 +51,7 @@ public class playerShoot : MonoBehaviour
                 rb.AddForce(shootDir.normalized * projectileSpeed, ForceMode2D.Impulse);
             }
             proj.GetComponent<Slime>().onShoot(GetComponent<Rigidbody2D>());
-            AudioManager.Instance.PlaySFX(shootSFX);
+            AudioManager.Instance.PlayRandomSFX(shootSFX);
             gm.reduceSlimeCount();
         }
     }

@@ -168,6 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickedObject: {fileID: 0}
   viscosity: 140
+  sticky: {fileID: 8300000, guid: 0bc8dc4d39071eb4c853b7e63a0a3ea8, type: 3}
+  stickyRelease: {fileID: 8300000, guid: 56ec73a95dffb0f43911ae6b43e554e8, type: 3}
 --- !u!1 &4995263351944761749
 GameObject:
   m_ObjectHideFlags: 0
