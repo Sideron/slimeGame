@@ -354,7 +354,7 @@ MonoBehaviour:
   extractDistance: 3.6
   slimeLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 321
 --- !u!1 &6017624086299319667
 GameObject:
   m_ObjectHideFlags: 0
