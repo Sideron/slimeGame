@@ -67,10 +67,4 @@ public class playerExtract : MonoBehaviour
     {
         isExtracting = false;
     }
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Vector2 direction = ga.getShootPosition() - new Vector2(transform.position.x, transform.position.y);
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + direction.normalized * extractDistance);
-    }
 }

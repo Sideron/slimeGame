@@ -12,7 +12,7 @@ public class stickyParasite : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            sticky.releasePlayer();
+            sticky.releasePlayer(GetComponent<Rigidbody2D>());
             pc.Dash();
             Destroy(this);
         }

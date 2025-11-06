@@ -39,7 +39,7 @@ public class StickySlime : Slime
             Debug.Log("Released");
             if (player != null)
             {
-                releasePlayer();
+                releasePlayer(rb);
             }
         }
     }
@@ -48,10 +48,9 @@ public class StickySlime : Slime
         myrb.bodyType = RigidbodyType2D.Static;
         wallSticked = true;
     }
-    public void releasePlayer()
+    public void releasePlayer(Rigidbody2D playerRB)
     {
         AudioManager.Instance.PlaySFX(stickyRelease, 0.6f);
-        Rigidbody2D playerRB = stickedObject.GetComponent<Rigidbody2D>();
         playerRB.bodyType = RigidbodyType2D.Dynamic;
         playerRB.linearDamping = 0;
         stickedObject = null;

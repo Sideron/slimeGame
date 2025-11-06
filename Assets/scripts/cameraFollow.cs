@@ -45,15 +45,8 @@ public class cameraFollow : MonoBehaviour
         );
 
         float smoothX = Mathf.Lerp(transform.position.x, targetX, speed * Time.deltaTime);
+        float smoothY = Mathf.Lerp(transform.position.y, targetY, speed * Time.deltaTime);
 
-        transform.position = new Vector3(smoothX, targetY, -10f);
-        /*if (freezeY)
-        {
-            transform.position = new Vector3(Mathf.Clamp(nPosition.x,min,max), transform.position.y, -10);
-        }
-        else
-        {
-            transform.position = new Vector3(transform.position.x, Mathf.Clamp(nPosition.y,min,max), -10);
-        }*/
+        transform.position = new Vector3(smoothX, smoothY, -10f);
     }
 }
