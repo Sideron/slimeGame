@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class slimeRow : MonoBehaviour
 {
-    [SerializeField]private uiSlimeCounter[] counters;
+    private uiSlimeCounter[] counters;
     public Transform selectFrame;
     public GameObject slimeCounterPrefab;
     public int index = 0;
