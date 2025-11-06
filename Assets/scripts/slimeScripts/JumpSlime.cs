@@ -18,10 +18,7 @@ public class JumpSlime : Slime
     public override void onShoot(Rigidbody2D rb)
     {
         base.onShoot(rb);
-        if (rb.linearVelocity.y > 0.01f || rb.linearVelocity.y < -0.01f)
-        {
-            pushObject(rb);
-        }
+        pushObject(rb);
     }
     
     private void pushObject(Rigidbody2D rb)
