@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
+    public bool isGrounded;
     private float moveInput;
     public float coyoteTime = 0.1f;   // tiempo extra después de caer
     private float coyoteTimeCounter;

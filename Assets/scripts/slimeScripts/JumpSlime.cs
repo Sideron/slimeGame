@@ -18,7 +18,11 @@ public class JumpSlime : Slime
     public override void onShoot(Rigidbody2D rb)
     {
         base.onShoot(rb);
-        pushObject(rb);
+        bool isGrounded = rb.GetComponent<playerController>().isGrounded;
+        if (!isGrounded)
+        {
+            pushObject(rb);
+        }
     }
     
     private void pushObject(Rigidbody2D rb)
