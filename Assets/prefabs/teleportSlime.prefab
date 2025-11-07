@@ -166,3 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportAudio: {fileID: 8300000, guid: 5e5430f35fa93714e8e846e1db0e7cfc, type: 3}
+  teleportEffectPrefab: {fileID: 7380241715675028934, guid: db6a3e88367a54126af082cbe1348d73, type: 3}
