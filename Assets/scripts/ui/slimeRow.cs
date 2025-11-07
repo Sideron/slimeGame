@@ -14,7 +14,7 @@ public class slimeRow : MonoBehaviour
         counters = new uiSlimeCounter[slimes.Length];
         for (int i = 0; i < slimes.Length; i++)
         {
-            GameObject nCounter = Instantiate(slimeCounterPrefab, selectFrame.position + Vector3.right*(i*100), Quaternion.identity);
+            GameObject nCounter = Instantiate(slimeCounterPrefab, selectFrame.position + Vector3.right*(i*200), Quaternion.identity);
             nCounter.transform.SetParent(this.transform);
             nCounter.transform.localScale = Vector3.one;
             uiSlimeCounter counterScript = nCounter.GetComponent<uiSlimeCounter>();
