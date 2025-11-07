@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5336669663936387931}
   - component: {fileID: 2271560762024608604}
   - component: {fileID: 7300308860949984523}
+  - component: {fileID: 474937758433438272}
   m_Layer: 6
   m_Name: jumpSlime
   m_TagString: Slime
@@ -125,7 +126,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.36}
   m_Radius: 0.34
 --- !u!50 &2271560762024608604
 Rigidbody2D:
@@ -171,6 +172,28 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5d706f4fd1c7ad74990db10a16ec17c6, type: 3}
   - {fileID: 8300000, guid: 56e54eb4c43adfe4aaa1e976650fde08, type: 3}
   - {fileID: 8300000, guid: 4a2904557c853da44bf143ad8f70248f, type: 3}
+--- !u!95 &474937758433438272
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237166614502878501}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c03480c9eb0c9400ea67d42f689a2b51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6450467912799435179
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 6450467912799435179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.361, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
