@@ -9,15 +9,19 @@ public class StickySlime : Slime
     [SerializeField] private float viscosity = 50f;
     [SerializeField] private AudioClip sticky;
     [SerializeField] private AudioClip stickyRelease;
+    [SerializeField] private ParticleSystem stickyParticles;
     void Start()
     {
         myrb = GetComponent<Rigidbody2D>();
+        stickyParticles.Stop();
     }
     public override void onTouch(Rigidbody2D rb)
     {
         if (wallSticked && stickedObject == null)
         {
             AudioManager.Instance.PlaySFX(sticky, 1.0f);
+            stickyParticles.Stop();
+            stickyParticles.Play();
             Debug.Log("Entered");
             rb.bodyType = RigidbodyType2D.Static;
             stickedObject = rb.gameObject;
@@ -47,6 +51,8 @@ public class StickySlime : Slime
     {
         myrb.bodyType = RigidbodyType2D.Static;
         wallSticked = true;
+        stickyParticles.Stop();
+        stickyParticles.Play();
     }
     public void releasePlayer(Rigidbody2D playerRB)
     {
