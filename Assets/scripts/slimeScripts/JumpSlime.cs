@@ -10,7 +10,7 @@ public class JumpSlime : Slime
     void Start()
     {
         myAnim = GetComponent<Animator>();
-        Invoke("animUnabled", 0.4f);
+        Invoke("animUnabled", 0.3f);
         Debug.Log(myAnim.name);
     }
     public override void onTouch(Rigidbody2D rb)
@@ -39,8 +39,8 @@ public class JumpSlime : Slime
         if (myAnim)
         {
             myAnim.enabled = true;
-            Invoke("animUnabled", 0.5f);
-        } // nombre del state, no del clip
+            Invoke("animUnabled", 0.3f);
+        }
         float acutalSpeed = rb.linearVelocity.magnitude;
         rb.linearVelocity = (-transform.position + rb.transform.position).normalized * (acutalSpeed >= impulseForce ? acutalSpeed : impulseForce);
     }

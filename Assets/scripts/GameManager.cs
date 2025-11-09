@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     public void restartValues()
     {
         Debug.Log("Respawn");
+        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         player.transform.position = lastSpawnTransform.position;
         GameObject[] slimesInScene = GameObject.FindGameObjectsWithTag("Slime");
 

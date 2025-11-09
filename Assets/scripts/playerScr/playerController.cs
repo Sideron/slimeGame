@@ -37,6 +37,10 @@ public class playerController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 
         anim.enabled = (isGrounded && Mathf.Abs(moveInput) > 0);
+        if(!anim.enabled)
+        {
+            anim.Rebind();
+        }
 
         if (moveInput != 0)
         {

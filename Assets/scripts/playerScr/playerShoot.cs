@@ -7,6 +7,7 @@ public class playerShoot : MonoBehaviour
     public float projectileSpeed = 10f;
     public GameManager gm;
     public LayerMask layerMask;
+    private TrajectoryLine trajectoryLine;
     GunAim ga;
 
     [SerializeField] private AudioClip[] shootSFX;
@@ -14,11 +15,17 @@ public class playerShoot : MonoBehaviour
     void Start()
     {
         ga = GetComponentInChildren<GunAim>();
+        trajectoryLine = GetComponentInChildren<TrajectoryLine>();
     }
 
     void Update()
     {
-        // Ejemplo: dispara con clic izquierdo
+        Vector2 myPosition = new Vector2(transform.position.x, transform.position.y);
+        //trajectoryLine.launchPoint = ga.getShootPosition() - myPosition;
+        trajectoryLine.launchSpeed = projectileSpeed;
+        Vector2 dir = ga.getShootPosition() - myPosition;
+        trajectoryLine.angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        trajectoryLine.DrawTrajectory();
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
