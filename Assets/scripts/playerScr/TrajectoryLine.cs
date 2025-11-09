@@ -13,7 +13,7 @@ public class TrajectoryLine : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        gravity = Mathf.Abs(Physics2D.gravity.y);
+        gravity = 40;
 
         DrawTrajectory();
     }
