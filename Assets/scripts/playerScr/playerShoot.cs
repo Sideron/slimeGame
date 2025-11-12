@@ -16,13 +16,13 @@ public class playerShoot : MonoBehaviour
     {
         ga = GetComponentInChildren<GunAim>();
         trajectoryLine = GetComponentInChildren<TrajectoryLine>();
+        trajectoryLine.launchSpeed = projectileSpeed;
     }
 
     void Update()
     {
         Vector2 myPosition = new Vector2(transform.position.x, transform.position.y);
         //trajectoryLine.launchPoint = ga.getShootPosition() - myPosition;
-        trajectoryLine.launchSpeed = projectileSpeed;
         Vector2 dir = ga.getShootPosition() - myPosition;
         trajectoryLine.angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         trajectoryLine.DrawTrajectory();
