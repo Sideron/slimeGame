@@ -17,6 +17,7 @@ public class playerShoot : MonoBehaviour
         ga = GetComponentInChildren<GunAim>();
         trajectoryLine = GetComponentInChildren<TrajectoryLine>();
         trajectoryLine.launchSpeed = projectileSpeed;
+        setCharge(slimeCharge);
     }
 
     void Update()
@@ -64,6 +65,11 @@ public class playerShoot : MonoBehaviour
     }
     public void setCharge(GameObject slime)
     {
+        Rigidbody2D rb = slime.GetComponent<Rigidbody2D>();
+        if (rb != null && trajectoryLine != null)
+        {
+            trajectoryLine.setGravity(rb.gravityScale*rb.mass);
+        }
         slimeCharge = slime;
     }
 }

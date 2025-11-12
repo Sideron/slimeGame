@@ -14,9 +14,9 @@ public class TrajectoryLine : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        gravity = 40;
+        //gravity = 2*2.2f*11f;
 
-        DrawTrajectory();
+        //DrawTrajectory();
     }
 
     public void DrawTrajectory()
@@ -38,5 +38,9 @@ public class TrajectoryLine : MonoBehaviour
 
         lineRenderer.positionCount = resolution;
         lineRenderer.SetPositions(points);
+    }
+    public void setGravity(float g)
+    {
+        gravity = g*11;
     }
 }
