@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8574167947916935274}
   - component: {fileID: 530131330007532359}
+  - component: {fileID: 5368190012926452860}
   m_Layer: 3
   m_Name: gunspr
   m_TagString: Untagged
@@ -218,8 +219,7 @@ Transform:
   m_LocalPosition: {x: 0.8563935, y: -0.012, z: 0}
   m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1949641169684550093}
+  m_Children: []
   m_Father: {fileID: 4143876887074691891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &530131330007532359
@@ -277,6 +277,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5368190012926452860
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4686924816765343256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7db61c8fdee904ca2b8c333eeebe2dac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5711006763795972542
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +479,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
+  anim: {fileID: 6657095817349662269}
   isGrounded: 0
   coyoteTime: 0.1
   jumpSound:
@@ -482,6 +505,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  shootAnimator: {fileID: 5368190012926452860}
   shootSFX:
   - {fileID: 0}
   - {fileID: 0}
@@ -541,11 +565,11 @@ Transform:
   m_GameObject: {fileID: 6017624086299319667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.404, y: 0, z: 0}
-  m_LocalScale: {x: 0.7692311, y: 0.76923084, z: 0.7692308}
+  m_LocalPosition: {x: 1.4017925, y: -0.011999905, z: 0}
+  m_LocalScale: {x: 1.038462, y: 1.0384617, z: 1.0384616}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8574167947916935274}
+  m_Father: {fileID: 4143876887074691891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7302563217155472718
 GameObject:
@@ -5522,6 +5546,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8889101384437412328}
+  - {fileID: 1949641169684550093}
   - {fileID: 8574167947916935274}
   m_Father: {fileID: 2639830387558708577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

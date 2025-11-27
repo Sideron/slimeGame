@@ -12,6 +12,7 @@ public class playerController : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
+    [SerializeField]
     private Animator anim;
 
     public bool isGrounded;
@@ -27,7 +28,6 @@ public class playerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()

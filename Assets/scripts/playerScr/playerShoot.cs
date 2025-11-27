@@ -8,6 +8,8 @@ public class playerShoot : MonoBehaviour
     public GameManager gm;
     public LayerMask layerMask;
     private TrajectoryLine trajectoryLine;
+    [SerializeField]
+    private Animator shootAnimator;
     GunAim ga;
 
     [SerializeField] private AudioClip[] shootSFX;
@@ -37,6 +39,8 @@ public class playerShoot : MonoBehaviour
     {
         if (gm.canShoot())
         {
+            shootAnimator.Rebind();
+            shootAnimator.Play("shootAnim", -1, 0f);
             Vector2 myPosition = new Vector2(transform.position.x, transform.position.y);
             float distance = (-myPosition + ga.getShootPosition()).magnitude;
             RaycastHit2D rayCollision = Physics2D.Raycast(myPosition, -myPosition + ga.getShootPosition(),distance,layerMask);
