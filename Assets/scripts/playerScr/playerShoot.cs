@@ -10,6 +10,8 @@ public class playerShoot : MonoBehaviour
     private TrajectoryLine trajectoryLine;
     [SerializeField]
     private Animator shootAnimator;
+    [SerializeField]
+    private GameObject shootEffect;
     GunAim ga;
 
     [SerializeField] private AudioClip[] shootSFX;
@@ -41,6 +43,9 @@ public class playerShoot : MonoBehaviour
         {
             shootAnimator.Rebind();
             shootAnimator.Play("shootAnim", -1, 0f);
+            GameObject particle = Instantiate(shootEffect, ga.getShootPosition(), Quaternion.identity);
+            particle.transform.parent = ga.transform;
+            particle.transform.rotation = ga.transform.rotation;
             Vector2 myPosition = new Vector2(transform.position.x, transform.position.y);
             float distance = (-myPosition + ga.getShootPosition()).magnitude;
             RaycastHit2D rayCollision = Physics2D.Raycast(myPosition, -myPosition + ga.getShootPosition(),distance,layerMask);

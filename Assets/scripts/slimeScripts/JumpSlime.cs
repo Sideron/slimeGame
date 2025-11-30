@@ -9,6 +9,7 @@ public class JumpSlime : Slime
     private Animator myAnim;
     void Start()
     {
+        transform.position = transform.position + new Vector3(0, -0.36f, 0);
         myAnim = GetComponent<Animator>();
         Invoke("animUnabled", 0.3f);
         Debug.Log(myAnim.name);

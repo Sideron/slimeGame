@@ -25,7 +25,7 @@ public class TrajectoryLine : MonoBehaviour
         float rad = angle * Mathf.Deg2Rad;
         float sin = Mathf.Sin(rad);
 
-        float totalTime = 2f * launchSpeed * Mathf.Sign(sin) / gravity;
+        float totalTime = 1f * launchSpeed * Mathf.Sign(sin) / gravity;
 
         for (int i = 0; i < resolution; i++)
         {
