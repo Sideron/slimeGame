@@ -22,7 +22,6 @@ public class StickySlime : Slime
             AudioManager.Instance.PlaySFX(sticky, 1.0f);
             stickyParticles.Stop();
             stickyParticles.Play();
-            Debug.Log("Entered");
             rb.bodyType = RigidbodyType2D.Static;
             stickedObject = rb.gameObject;
             playerController player = rb.transform.GetComponent<playerController>();
@@ -40,7 +39,6 @@ public class StickySlime : Slime
         playerController player = rb.transform.GetComponent<playerController>();
         if (rb.gameObject == stickedObject && player)
         {
-            Debug.Log("Released");
             if (player != null)
             {
                 releasePlayer(rb);
