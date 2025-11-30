@@ -40,13 +40,13 @@ public class JumpSlime : Slime
             else if (angle >= -45 && angle <= 45)
             {
                 // derecha
-                pushObject(rb, new Vector2(1, 1));
+                pushObject(rb, new Vector2(1, 0.6f));
                 Debug.Log("derecha");
             }
             else 
             {
                 // izquierda
-                pushObject(rb, new Vector2(-1, 1));
+                pushObject(rb, new Vector2(-1, 0.6f));
                 Debug.Log("izquierda");
             }
         }
@@ -85,7 +85,7 @@ public class JumpSlime : Slime
         }
         Vector2 residualSpeed = rb.linearVelocity-(rb.linearVelocity * dir);
         float acutalSpeed = rb.linearVelocity.magnitude;
-        rb.linearVelocity = (dir.normalized * (acutalSpeed >= impulseForce ? acutalSpeed : impulseForce))+residualSpeed;
+        rb.linearVelocity = (dir * (acutalSpeed >= impulseForce ? acutalSpeed : impulseForce))+residualSpeed;
     }
     void animUnabled()
     {
