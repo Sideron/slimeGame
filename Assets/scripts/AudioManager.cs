@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
@@ -7,14 +8,16 @@ public class AudioManager : MonoBehaviour
 
     [Header("Music")]
     [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioClip backgroundMusic;
+
+    [Header("Music Clips")]
+    [SerializeField] private AudioClip mainMenuMusic;
+    [SerializeField] private AudioClip gameplayMusic;
 
     [Header("Sound Effects")]
     [SerializeField] private AudioSource sfxSource;
 
     private void Awake()
     {
-        // Patrón Singleton limpio
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -25,29 +28,56 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        PlayMusic();
+        // Detecta cuando se cambia de escena
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    #region 🎵 Música
-    public void PlayMusic()
+    private void OnDisable()
     {
-        if (musicSource.isPlaying) return;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
-        musicSource.clip = backgroundMusic;
-        musicSource.volume = 0.5f;
+    private void Start()
+    {
+        PlayMainMenuMusic(); // Primera vez
+    }
+
+    // 🔄 Cambia la música automáticamente al cargar una escena
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu")
+            PlayMainMenuMusic();
+        else
+            PlayGameplayMusic();
+    }
+
+    #region MUSIC
+
+    private void PlayMusic(AudioClip clip, float volume = 0.5f)
+    {
+        if (clip == null) return;
+
+        // Evita reiniciar la misma música si ya está sonando
+        if (musicSource.clip == clip && musicSource.isPlaying)
+            return;
+
+        musicSource.clip = clip;
+        musicSource.volume = volume;
         musicSource.loop = true;
         musicSource.Play();
     }
 
-    public void StopMusic() => musicSource.Stop();
+    public void PlayMainMenuMusic() =>
+        PlayMusic(mainMenuMusic, 0.5f);
 
-    public void SetMusicVolume(float volume) =>
-        musicSource.volume = Mathf.Clamp01(volume);
+    public void PlayGameplayMusic() =>
+        PlayMusic(gameplayMusic, 0.6f);
+
     #endregion
 
-    #region 🔊 Sonidos (SFX)
+    #region SFX (igual que antes)
     public void PlaySFX(AudioClip clip, float volume = 0.4f)
     {
         if (clip == null) return;
@@ -58,7 +88,6 @@ public class AudioManager : MonoBehaviour
     {
         if (clips == null || clips.Count == 0) return;
 
-        // Selecciona un sonido aleatorio y lo reproduce
         AudioClip randomClip = clips[Random.Range(0, clips.Count)];
         PlaySFX(randomClip, volume);
     }
