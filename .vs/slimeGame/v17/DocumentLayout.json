@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\GAAGAGAG\\slimeGame\\",
+  "WorkspaceRootPath": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|d:\\la-u\\ciclo 2025-2\\proyecto de videojuegos\\gaagagag\\slimegame\\assets\\scripts\\trgnextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\trgnextlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|c:\\users\\educp\\documents\\proyectos de unity\\slimegame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TrgNextLevel.cs",
-              "DocumentMoniker": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\GAAGAGAG\\slimeGame\\Assets\\scripts\\TrgNextLevel.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\TrgNextLevel.cs",
-              "ToolTip": "D:\\la-u\\ciclo 2025-2\\Proyecto de videojuegos\\GAAGAGAG\\slimeGame\\Assets\\scripts\\TrgNextLevel.cs",
-              "RelativeToolTip": "Assets\\scripts\\TrgNextLevel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameManager.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwDcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T05:19:17.704Z",
+              "WhenOpened": "2025-12-02T03:02:40.391Z",
               "EditorCaption": ""
             }
           ]

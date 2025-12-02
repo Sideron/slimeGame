@@ -14,10 +14,14 @@ public class GameManager : MonoBehaviour
     private GameObject spawnPoints;
     private Transform[] spawnPointArray;
     Transform lastSpawnTransform;
+    float restartVal = 0f;
+    radialEffect radEffect;
+    const float amountToRestat = 30;
     void Start()
     {
         player.gm = this;
         row.init(slimes, amounts);
+        radEffect = FindAnyObjectByType<radialEffect>();
         fadeOverlay = GameObject.Find("fadeOverlay").GetComponent<Animator>();
         spawnPoints = GameObject.FindGameObjectWithTag("SpawnPoint");
         spawnPointArray = spawnPoints.GetComponentsInChildren<Transform>();
@@ -49,6 +53,19 @@ public class GameManager : MonoBehaviour
         if (scroll != 0 && Mathf.Abs(scroll) < scrollSensitivity)
         {
             scrollSlime(scroll<0?-1:1);
+        }
+        if (Input.GetKey(KeyCode.R)) {
+            restartVal += 0.1f;
+            radEffect.setValue(restartVal / amountToRestat);
+            if(restartVal >= amountToRestat)
+            {
+                restartValues();
+                restartVal = 0;
+            }
+        }else if (restartVal > 0) {
+            
+            restartVal -= 0.1f;
+            radEffect.setValue(restartVal / amountToRestat);
         }
     }
 
