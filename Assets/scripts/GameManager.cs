@@ -16,9 +16,10 @@ public class GameManager : MonoBehaviour
     Transform lastSpawnTransform;
     float restartVal = 0f;
     radialEffect radEffect;
-    const float amountToRestat = 30;
+    const float amountToRestat = 11;
     void Start()
     {
+        Application.targetFrameRate = 60;
         player.gm = this;
         row.init(slimes, amounts);
         radEffect = FindAnyObjectByType<radialEffect>();
