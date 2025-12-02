@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95e87c707ae874b9595b86483dbfcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLevel: 7
+  targetLevel: 8
   spawnPointName: 
 --- !u!61 &398275126
 BoxCollider2D:

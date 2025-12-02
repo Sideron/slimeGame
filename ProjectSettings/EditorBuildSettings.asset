@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/nivelesOfiicial/level5.unity
     guid: 34b0988d84445964b91963c485f0b93b
   - enabled: 1
+    path: Assets/Scenes/nivelesOfiicial/tutoTeleport2.unity
+    guid: 78be99090c81132419944598b2477e17
+  - enabled: 1
     path: Assets/Scenes/nivelesOfiicial/level6.unity
     guid: 2cb07393b7a87f843abe51fe7dab8fcd
   - enabled: 1
