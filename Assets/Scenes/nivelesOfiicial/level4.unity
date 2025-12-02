@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95e87c707ae874b9595b86483dbfcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLevel: 5
+  targetLevel: 6
   spawnPointName: 
 --- !u!61 &398275126
 BoxCollider2D:
@@ -1077,7 +1077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c61f7efba06fd8499604d0090f63a13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSensitivity: 100
   slimes:
   - {fileID: 1237166614502878501, guid: 2f46727af8d34499ba2cee59ef56ed67, type: 3}
   - {fileID: 2749771474833283599, guid: ee6ea9075f7015c459693b8198c799b2, type: 3}

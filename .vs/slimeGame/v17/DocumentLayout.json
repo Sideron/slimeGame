@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\assets\\scripts\\utils\\radialeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utils\\radialeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|c:\\users\\educp\\documents\\proyectos de unity\\slimegame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|c:\\users\\educp\\documents\\proyectos de unity\\slimegame\\assets\\scripts\\utils\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utils\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|c:\\users\\educp\\documents\\proyectos de unity\\slimegame\\assets\\scripts\\utils\\radialeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AEF7ED6-D0B4-2A0D-EC93-F1FBF5DDAE8C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utils\\radialeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "cameraFollow.cs",
+              "DocumentMoniker": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\utils\\cameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\utils\\cameraFollow.cs",
+              "ToolTip": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\utils\\cameraFollow.cs",
+              "RelativeToolTip": "Assets\\scripts\\utils\\cameraFollow.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T15:47:48.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "radialEffect.cs",
               "DocumentMoniker": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\utils\\radialEffect.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\utils\\radialEffect.cs",
@@ -35,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\educp\\Documents\\Proyectos de Unity\\slimeGame\\Assets\\scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\scripts\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T03:02:40.391Z",
               "EditorCaption": ""
