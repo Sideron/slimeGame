@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private float scrollSensitivity = 2f;
+    const float scrollSensitivity = 1.5f;
     public GameObject[] slimes;
     public int[] amounts;
     private int[] currentAmounts;

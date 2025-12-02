@@ -20,7 +20,7 @@ public class cameraFollow : MonoBehaviour
         transform.position = new Vector3(
             Mathf.Clamp(position.x, minX, maxX),
             Mathf.Clamp(position.y, minY, maxY),
-            -10f
+            transform.position.z
         );
     }
     void FixedUpdate()
@@ -47,6 +47,6 @@ public class cameraFollow : MonoBehaviour
         float smoothX = Mathf.Lerp(transform.position.x, targetX, speed * Time.deltaTime);
         float smoothY = Mathf.Lerp(transform.position.y, targetY, speed * Time.deltaTime);
 
-        transform.position = new Vector3(smoothX, smoothY, -10f);
+        transform.position = new Vector3(smoothX, smoothY, transform.position.z);
     }
 }
